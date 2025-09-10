@@ -1,5 +1,5 @@
 <template>
-	<div class="h-screen background">
+	<div class="h-screen background bg-fixed bg-cover bg-no-repeat bg-center">
 		<h1
 			class="uppercase text-light font-playfair text-6xl text-center pt-[40rem] drop-shadow-sm drop-shadow-black/60">
 			Oslo Strada
@@ -23,8 +23,10 @@
 
 <style>
 .background {
-	background-image: url("background-mobile.jpeg");
-	background-position: cover;
-	background-attachment: fixed;
+	background-image: url("../public/background-mobile.jpeg");
+
+	@media (width >= 48rem /* 768px */) {
+		background-image: url("../public/background-desktop.jpeg");
+	}
 }
 </style>
