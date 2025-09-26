@@ -1,10 +1,10 @@
 import {
 	createRouter,
-	createWebHistory,
+	createWebHashHistory,
 	type RouteRecordRaw,
 } from "vue-router";
-import HomePage from "./views/HomePage.vue";
 import AboutPage from "./views/AboutPage.vue";
+import HomePage from "./views/HomePage.vue";
 
 const routes: RouteRecordRaw[] = [
 	{ name: "home", path: "/", component: HomePage },
@@ -12,6 +12,6 @@ const routes: RouteRecordRaw[] = [
 ];
 
 export const router = createRouter({
-	history: createWebHistory(),
+	history: createWebHashHistory(),
 	routes: routes,
 });
