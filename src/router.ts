@@ -5,10 +5,12 @@ import {
 } from "vue-router";
 import AboutPage from "./views/AboutPage.vue";
 import HomePage from "./views/HomePage.vue";
+import NotFound from "./views/NotFound.vue";
 
 const routes: RouteRecordRaw[] = [
-	{ name: "home", path: "/", component: HomePage },
-	{ name: "about", path: "/about", component: AboutPage },
+	{ name: "Home", path: "/", component: HomePage },
+	{ name: "About", path: "/about", component: AboutPage },
+	{ name: "NotFound", path: "/:pathMatch(.*)", component: NotFound },
 ];
 
 export const router = createRouter({
