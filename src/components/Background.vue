@@ -2,7 +2,7 @@
 	<img
 		:src="imageSrc"
 		alt="Background"
-		class="fixed top-0 left-0 -z-10 min-h-screen min-w-screen object-cover" />
+		class="fixed top-0 left-0 -z-10 min-h-dvh min-w-screen object-cover" />
 </template>
 
 <script setup lang="ts">
