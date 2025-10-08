@@ -1,6 +1,7 @@
 <template>
 	<div
-		class="background h-screen overflow-y-auto bg-cover bg-fixed bg-center bg-no-repeat pt-96 md:pt-32">
+		class="flex h-screen flex-col justify-end overflow-y-auto pb-48 md:justify-start md:pt-32">
+		<background />
 		<bicycle-logo
 			class="fill-light stroke-light mx-auto mb-2 max-w-xl px-4" />
 		<header-light class="mb-4" />
@@ -20,17 +21,8 @@
 </template>
 
 <script setup lang="ts">
+import Background from "../components/Background.vue";
 import BicycleLogo from "../components/BicycleLogo.vue";
 import HeaderLight from "../components/HeaderLight.vue";
 import LinkButton from "../components/LinkButton.vue";
 </script>
-
-<style>
-.background {
-	background-image: url("/background-mobile.jpeg");
-
-	@media (width >= 48rem /* 768px */) {
-		background-image: url("/background-desktop.jpeg");
-	}
-}
-</style>
